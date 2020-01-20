@@ -2,3 +2,4 @@
 3scale -k remote add ravello https://6c300fa92e146790fa657e3476a978770b0726fa8dafc7c61c05438d14124629@3scale-admin.apps.lab.example.com
 3scale remote list
 
+3scale import openapi -d ravello https://raw.githubusercontent.com/microcks/api-lifecycle/master/beer-catalog-demo/api-contracts/beer-catalog-api-swagger.json
