@@ -80,3 +80,6 @@ Listar la configuración de ambientes
 
 Promover una api entre ambientes
 3scale -k proxy promote ravello beer_catalog_api
+
+Borrar una api
+3scale -k service delete ravello beer_catalog_api
