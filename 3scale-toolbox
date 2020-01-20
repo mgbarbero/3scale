@@ -59,3 +59,17 @@ Reactivar una aplicación
 Cambiar el user key (autenticación) de una aplicación
 3scale -k application apply ravello --user-key=userkeynueva 23
 
+Listar todas las aplicaciones
+3scale -k application list ravello
+
+Listar todas las apis
+3scale -k service list ravello
+
+Listar todos los planes
+3scale -k application-plan list ravello
+
+Listar todos los active docs
+3scale -k activedocs list ravello
+
+Listar todos los métodos
+3scale -k method list ravello 
