@@ -73,3 +73,12 @@ Listar todos los active docs
 
 Listar todos los métodos
 3scale -k method list ravello beer_catalog_api
+
+Listar la configuración de ambientes
+3scale -k proxy list ravello beer_catalog_api staging
+3scale -k proxy list ravello beer_catalog_api production
+
+Promover una api entre ambientes
+3scale -k proxy promote ravello beer_catalog_api
+
+
