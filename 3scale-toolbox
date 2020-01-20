@@ -51,11 +51,11 @@ Importar un application plan
 3scale -k application-plan import ravello -f planvip.yml nuevaapi
 
 Suspender una aplicación
-3scale -k application apply ravello --suspend aplicacionvipprod
+3scale -k application apply ravello --suspend --service=beer_catalog_api_prod aplicacionvipprod
 
 Reactivar una aplicación
-3scale -k application apply ravello --resume aplicacionvipprod
+3scale -k application apply ravello --resume --service=beer_catalog_api_prod aplicacionvipprod
 
 Cambiar el user key (autenticación) de una aplicación
-3scale -k application apply ravello --user-key=userkeynueva aplicacionvipprod
+3scale -k application apply ravello --user-key=userkeynueva --service=beer_catalog_api_prod aplicacionvipprod
 
