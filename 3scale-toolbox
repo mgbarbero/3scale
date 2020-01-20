@@ -81,4 +81,5 @@ Listar la configuración de ambientes
 Promover una api entre ambientes
 3scale -k proxy promote ravello beer_catalog_api
 
-
+Copiar policies entre instancias
+3scale -k policy-registry copy ravello ravello2
