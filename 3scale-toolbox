@@ -72,4 +72,4 @@ Listar todos los active docs
 3scale -k activedocs list ravello
 
 Listar todos los métodos
-3scale -k method list ravello
+3scale -k method list ravello beer_catalog_api
