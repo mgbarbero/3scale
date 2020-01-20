@@ -1,3 +1,5 @@
+sudo rpm -Uvh https://github.com/3scale/3scale_toolbox_packaging/releases/download/v0.14.0/3scale-toolbox-0.14.0-1.el7.x86_64.rpm
+
 3scale -k remote add ravello https://6c300fa92e146790fa657e3476a978770b0726fa8dafc7c61c05438d14124629@3scale-admin.apps.lab.example.com
 3scale -k remote add ravello2 https://6c300fa92e146790fa657e3476a978770b0726fa8dafc7c61c05438d14124629@3scale-admin.apps.lab.example.com
 
