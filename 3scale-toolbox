@@ -66,10 +66,10 @@ Listar todas las apis
 3scale -k service list ravello
 
 Listar todos los planes
-3scale -k application-plan list ravello
+3scale -k application-plan list ravello beer_catalog_api
 
 Listar todos los active docs
 3scale -k activedocs list ravello
 
 Listar todos los métodos
-3scale -k method list ravello 
+3scale -k method list ravello
