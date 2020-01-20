@@ -1,5 +1,6 @@
-3scale -k remote add remoto https://10e315e185845214cc2a36b0ebbb524025ed9238a26f4cff5dc13206437bf64b@mgbarbero-admin.3scale.net
 3scale -k remote add ravello https://6c300fa92e146790fa657e3476a978770b0726fa8dafc7c61c05438d14124629@3scale-admin.apps.lab.example.com
+3scale -k remote add ravello2 https://6c300fa92e146790fa657e3476a978770b0726fa8dafc7c61c05438d14124629@3scale-admin.apps.lab.example.com
+
 3scale remote list
 
 3scale -k import openapi -d ravello https://raw.githubusercontent.com/microcks/api-lifecycle/master/beer-catalog-demo/api-contracts/beer-catalog-api-swagger.json
@@ -10,4 +11,4 @@
 
 3scale -k method create ravello beer_catalog_api custommethod
 
-3scale -k copy service --source=ravello --destination=remoto beer_catalog_api
+3scale -k copy service --source=ravello --destination=ravello2 -t beer_catalog_api_prod beer_catalog_api
