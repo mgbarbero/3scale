@@ -7,3 +7,5 @@
 3scale -k application-plan create -p ravello beer_catalog_api planvip
 
 3scale -k application create ravello user2 beer_catalog_api planvip aplicacionvip
+
+3scale -k method create ravello beer_catalog_api custommethod
