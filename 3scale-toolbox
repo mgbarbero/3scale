@@ -22,3 +22,5 @@ sudo rpm -Uvh https://github.com/3scale/3scale_toolbox_packaging/releases/downlo
 3scale -k activedocs create ravello -p cervezaapi https://raw.githubusercontent.com/microcks/api-lifecycle/master/beer-catalog-demo/api-contracts/beer-catalog-api-swagger.json
 
 3scale import csv -d ravello --file=myfile.csv
+
+3scale -k service create ravello -a 2 nuevaapi
