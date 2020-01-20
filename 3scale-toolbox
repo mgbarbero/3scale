@@ -12,7 +12,7 @@ Agregar dos instancias de api manager
 3scale -k remote add ravello2 https://6c300fa92e146790fa657e3476a978770b0726fa8dafc7c61c05438d14124629@3scale-admin.apps.lab.example.com
 
 Ver la lista de instancias
-3scale remote list
+3scale -k remote list
 
 Importar una api desde su especificación
 3scale -k import openapi -d ravello https://raw.githubusercontent.com/microcks/api-lifecycle/master/beer-catalog-demo/api-contracts/beer-catalog-api-swagger.json
@@ -39,7 +39,7 @@ Crear un activedoc
 3scale -k activedocs create ravello -p cervezaapi https://raw.githubusercontent.com/microcks/api-lifecycle/master/beer-catalog-demo/api-contracts/beer-catalog-api-swagger.json
 
 Importar un csv
-3scale import csv -d ravello --file=myfile.csv
+3scale -k import csv -d ravello --file=myfile.csv
 
 Crear una api (sin especificación)
 3scale -k service create ravello -a 2 nuevaapi
