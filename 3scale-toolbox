@@ -13,6 +13,8 @@ sudo rpm -Uvh https://github.com/3scale/3scale_toolbox_packaging/releases/downlo
 
 3scale -k method create ravello beer_catalog_api custommethod
 
+3scale -k metric create ravello beer_catalog_api custommetric
+
 3scale -k copy service --source=ravello --destination=ravello2 -t beer_catalog_api_prod beer_catalog_api
 
 3scale -k application create ravello user2 beer_catalog_api_prod planvip aplicacionvipprod
