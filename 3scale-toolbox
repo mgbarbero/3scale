@@ -15,3 +15,4 @@
 
 3scale -k application create ravello user2 beer_catalog_api_prod planvip aplicacionvipprod
 
+3scale -k activedocs create ravello -i beer_catalog_api_prod -p cervezaapi https://raw.githubusercontent.com/microcks/api-lifecycle/master/beer-catalog-demo/api-contracts/beer-catalog-api-swagger.json
