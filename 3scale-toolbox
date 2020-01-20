@@ -5,3 +5,5 @@
 3scale -k import openapi -d ravello https://raw.githubusercontent.com/microcks/api-lifecycle/master/beer-catalog-demo/api-contracts/beer-catalog-api-swagger.json
 
 3scale -k application-plan create -p ravello beer_catalog_api planvip
+
+3scale -k application create -p ravello redhat beer_catalog_api planvip aplicacionvip
