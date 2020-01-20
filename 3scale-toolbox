@@ -6,4 +6,4 @@
 
 3scale -k application-plan create -p ravello beer_catalog_api planvip
 
-3scale -k application create -p ravello redhat beer_catalog_api planvip aplicacionvip
+3scale -k application create ravello redhat beer_catalog_api planvip aplicacionvip
