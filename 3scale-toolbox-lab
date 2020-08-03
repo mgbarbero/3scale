@@ -1,0 +1,27 @@
+Crear directorio 3scale
+
+Crear una cuenta en 3scale
+
+Crear un token
+
+alias 3scale='docker run -v "c:/3scale":/opt/app-root/src/ --rm quay.io/redhat/3scale-toolbox 3scale'
+
+3scale remote add 3scale-saas "https://9f231d9cc801dd4e43c957e4d7bdf67eff6b07b8d78a2eefc6fd90e5979f4651@mbts-admin.3scale.net/"
+
+3scale service list 3scale-saas
+
+Descargar swagger.json en la carpeta 3scale
+
+https://raw.githubusercontent.com/microcks/api-lifecycle/master/beer-catalog-demo/api-contracts/beer-catalog-api-swagger.json
+
+3scale import openapi -d 3scale-saas swagger.json --override-private-base-url=https://echo-api.3scale.net:443 -t api
+
+3scale application-plan apply 3scale-saas api test -n "Test Plan" --default
+
+3scale application apply 3scale-saas 1234567890abcdef --account=john --name="Test Application" --description="Created from the CLI" --plan=test --service=api
+
+3scale proxy-config show 3scale-saas api sandbox
+
+curl -D - -H "api-key: 1234567890abcdef" "https://api-2445582805623.staging.gw.apicast.io/beer"
+
+3scale proxy-config promote 3scale-saas api
