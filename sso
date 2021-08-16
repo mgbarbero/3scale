@@ -19,6 +19,8 @@ Client Secret: addb491b9073b288052f0f105b6bcaea (TU CLIENT SECRET)
 
 Generar un token
 
+En GET URL usar:
+https://finto-3scale-apicast-staging.apps.lab.example.com/vocabularies?lang=en
 
 Para entrar a keycloack
 http://sso.apps.lab.example.com
