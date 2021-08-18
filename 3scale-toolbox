@@ -51,13 +51,13 @@ Importar un application plan
 3scale -k application-plan import staging -f planvip.yml nuevaapi
 
 Suspender una aplicación
-3scale -k application apply staging --suspend  23
+3scale -k application apply staging --suspend  TU_APP_ID
 
 Reactivar una aplicación
-3scale -k application apply staging --resume  23
+3scale -k application apply staging --resume  TU_APP_ID
 
 Cambiar el user key (autenticación) de una aplicación
-3scale -k application apply staging --user-key=userkeynueva 23
+3scale -k application apply staging --user-key=userkeynueva TU_APP_ID
 
 Listar todas las aplicaciones
 3scale -k application list staging
