@@ -8,78 +8,78 @@ Repositorio de github de 3scale toolbox
 https://github.com/3scale/3scale_toolbox
 
 Agregar dos instancias de api manager
-3scale -k remote add ravello https://6c300fa92e146790fa657e3476a978770b0726fa8dafc7c61c05438d14124629@3scale-admin.apps.lab.example.com
-3scale -k remote add ravello2 https://6c300fa92e146790fa657e3476a978770b0726fa8dafc7c61c05438d14124629@3scale-admin.apps.lab.example.com
+3scale -k remote add staging https://TU_TOKEN@3scale-admin.apps.lab.example.com
+3scale -k remote add production https://TU_TOKEN@3scale-admin.apps.lab.example.com
 
 Ver la lista de instancias
 3scale -k remote list
 
 Importar una api desde su especificación
-3scale -k import openapi -d ravello https://raw.githubusercontent.com/microcks/api-lifecycle/master/beer-catalog-demo/api-contracts/beer-catalog-api-swagger.json
+3scale -k import openapi -d staging https://raw.githubusercontent.com/microcks/api-lifecycle/master/beer-catalog-demo/api-contracts/beer-catalog-api-swagger.json
 
 Crear un plan
-3scale -k application-plan create -p ravello beer_catalog_api planvip
+3scale -k application-plan create -p staging beer_catalog_api planvip
 
 Crear una aplicación
-3scale -k application create ravello user2 beer_catalog_api planvip aplicacionvip
+3scale -k application create staging john beer_catalog_api planvip aplicacionvip
 
 Crear un método
-3scale -k method create ravello beer_catalog_api custommethod
+3scale -k method create staging beer_catalog_api custommethod
 
 Crear una métrica
-3scale -k metric create ravello beer_catalog_api custommetric
+3scale -k metric create staging beer_catalog_api custommetric
 
 Copiar un servicio completo
-3scale -k copy service --source=ravello --destination=ravello2 -t beer_catalog_api_prod beer_catalog_api
+3scale -k copy service --source=staging --destination=production -t beer_catalog_api_prod beer_catalog_api
 
 Crear una nueva aplicación
-3scale -k application create ravello user2 beer_catalog_api_prod planvip aplicacionvipprod
+3scale -k application create staging john beer_catalog_api_prod planvip aplicacionvipprod
 
 Crear un activedoc
-3scale -k activedocs create ravello -p cervezaapi https://raw.githubusercontent.com/microcks/api-lifecycle/master/beer-catalog-demo/api-contracts/beer-catalog-api-swagger.json
+3scale -k activedocs create staging -p cervezaapi https://raw.githubusercontent.com/microcks/api-lifecycle/master/beer-catalog-demo/api-contracts/beer-catalog-api-swagger.json
 
-Importar un csv
-3scale -k import csv -d ravello --file=myfile.csv
+Importar un csv (no probar)
+3scale -k import csv -d staging --file=myfile.csv
 
 Crear una api (sin especificación)
-3scale -k service create ravello -a 2 nuevaapi
+3scale -k service create staging -a 2 nuevaapi
 
 Exportar un application plan
-3scale -k application-plan export ravello -f planvip.yml beer_catalog_api_prod planvip
+3scale -k application-plan export staging -f planvip.yml beer_catalog_api_prod planvip
 
 Importar un application plan
-3scale -k application-plan import ravello -f planvip.yml nuevaapi
+3scale -k application-plan import staging -f planvip.yml nuevaapi
 
 Suspender una aplicación
-3scale -k application apply ravello --suspend  23
+3scale -k application apply staging --suspend  23
 
 Reactivar una aplicación
-3scale -k application apply ravello --resume  23
+3scale -k application apply staging --resume  23
 
 Cambiar el user key (autenticación) de una aplicación
-3scale -k application apply ravello --user-key=userkeynueva 23
+3scale -k application apply staging --user-key=userkeynueva 23
 
 Listar todas las aplicaciones
-3scale -k application list ravello
+3scale -k application list staging
 
 Listar todas las apis
-3scale -k service list ravello
+3scale -k service list staging
 
 Listar todos los planes
-3scale -k application-plan list ravello beer_catalog_api
+3scale -k application-plan list staging beer_catalog_api
 
 Listar todos los active docs
-3scale -k activedocs list ravello
+3scale -k activedocs list staging
 
 Listar todos los métodos
-3scale -k method list ravello beer_catalog_api
+3scale -k method list staging beer_catalog_api
 
 Listar la configuración de ambientes
-3scale -k proxy list ravello beer_catalog_api staging
-3scale -k proxy list ravello beer_catalog_api production
+3scale -k proxy list staging beer_catalog_api staging
+3scale -k proxy list production beer_catalog_api production
 
 Promover una api entre ambientes
-3scale -k proxy promote ravello beer_catalog_api
+3scale -k proxy promote staging beer_catalog_api
 
-Borrar una api
-3scale -k service delete ravello beer_catalog_api
+Borrar una api (ver si tira error)
+3scale -k service delete staging beer_catalog_api
