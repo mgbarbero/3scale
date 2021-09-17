@@ -11,16 +11,16 @@ Seleccionar Oauth 2.0
 En Get New Access Token completar los siguientes datos:
 
 Fill in the settings configuration with the following information: 
-Callback URL: http://finto-3scale-apicast-staging.apps.lab.example.com/protected/*
+Callback URL: https://api-3scale-apicast-staging.apps.lab.example.com/protected/*
 Auth URL: http://sso.apps.lab.example.com/auth/realms/jb240/protocol/openid-connect/auth
-Access Token URL: http://sso.apps.lab.example.com/auth/realms/jb240/protocol/openid-connect/token 
+Access Token URL: http://sso.apps.lab.example.com/auth/realms/jb240/protocol/openid-connect/token
 Client ID: 059e3882 (TU CLIENT ID)
 Client Secret: addb491b9073b288052f0f105b6bcaea (TU CLIENT SECRET)
 
 Generar un token
 
 En GET URL usar:
-https://finto-3scale-apicast-staging.apps.lab.example.com/vocabularies?lang=en
+https://api-3scale-apicast-staging.apps.lab.example.com/test
 
 Para entrar a keycloack
 http://sso.apps.lab.example.com
