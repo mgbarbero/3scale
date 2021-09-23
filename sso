@@ -11,7 +11,7 @@ Seleccionar Oauth 2.0
 En Get New Access Token completar los siguientes datos:
 
 Fill in the settings configuration with the following information: 
-Callback URL: http://finto-3scale-apicast-staging.apps.lab.example.com/protected/*
+Callback URL: https://finto-3scale-apicast-staging.apps.lab.example.com/protected/*
 Auth URL: http://sso.apps.lab.example.com/auth/realms/jb240/protocol/openid-connect/auth
 Access Token URL: http://sso.apps.lab.example.com/auth/realms/jb240/protocol/openid-connect/token 
 Client ID: 059e3882 (TU CLIENT ID)
